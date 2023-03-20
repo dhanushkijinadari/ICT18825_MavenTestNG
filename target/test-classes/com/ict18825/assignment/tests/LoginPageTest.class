@@ -1,0 +1,19 @@
+����   9 r
+      %com/ict18825/assignment/base/TestBase <init> ()V
+  	 
+   +com/ict18825/assignment/tests/LoginPageTest initialization 
+ 'com/ict18825/assignment/pages/LoginPage
+  	     	loginPage )Lcom/ict18825/assignment/pages/LoginPage;
+     validateLoginPageTitle ()Ljava/lang/String;  actiTIME - Login  Incorrect page Title
+       org/testng/Assert assertEquals 9(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V	  " # $ logger Lorg/apache/log4j/Logger;
+ & ' ( ) * org/apache/log4j/Logger info (Ljava/lang/Object;)V
+  , - . validateLogo ()Z 0 The log is not visible
+  2 3 4 
+assertTrue (ZLjava/lang/String;)V
+ 6 7 8 9 : java/lang/Boolean valueOf (Z)Ljava/lang/Boolean;	  < = > prop Ljava/util/Properties; @ username
+ B C D E F java/util/Properties getProperty &(Ljava/lang/String;)Ljava/lang/String; H password
+  J K L login N(Ljava/lang/String;Ljava/lang/String;)Lcom/ict18825/assignment/pages/HomePage;	  N O P homePage (Lcom/ict18825/assignment/pages/HomePage;	  R S T driver Lorg/openqa/selenium/WebDriver; V W X Y  org/openqa/selenium/WebDriver quit Code LineNumberTable LocalVariableTable this -Lcom/ict18825/assignment/tests/LoginPageTest; setUp RuntimeVisibleAnnotations %Lorg/testng/annotations/BeforeMethod; loginPageTitleTest title Ljava/lang/String; Lorg/testng/annotations/Test; priority    logoTest isdisplayed Z    	loginTest    teardown #Lorg/testng/annotations/AfterClass; 
+SourceFile LoginPageTest.java !              O P        Z   3     *� �    [   
+       \        ] ^    _   Z   A     � *� Y� � �    [            \        ] ^   `     a    b   Z   X     *� � L+� � !+� %�    [              \        ] ^     c d  `     e  fI g  h   Z   Y     *� � +</� 1� !� 5� %�    [       "  #  $  % \        ] ^     i j  `     e  fI k  l   Z   J     **� � ;?� A� ;G� A� I� M�    [   
+    )  * \        ] ^   `     e  fI m  n   Z   7     	� Q� U �    [   
+    .  / \       	 ] ^   `     o    p    q

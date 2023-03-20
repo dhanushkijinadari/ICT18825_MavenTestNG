@@ -1,0 +1,22 @@
+ ����   9 g
+      %com/ict18825/assignment/base/TestBase <init> ()V	  	 
+   &com/ict18825/assignment/pages/HomePage driver Lorg/openqa/selenium/WebDriver;
+      'org/openqa/selenium/support/PageFactory initElements 8(Lorg/openqa/selenium/SearchContext;Ljava/lang/Object;)V	     logger Lorg/apache/log4j/Logger;      org/openqa/selenium/WebDriver getTitle ()Ljava/lang/String;
+     ! " org/apache/log4j/Logger info (Ljava/lang/Object;)V	  $ % & username  Lorg/openqa/selenium/WebElement; ( ) * + , org/openqa/selenium/WebElement isDisplayed ()Z
+ . / 0 1 2 java/lang/Boolean valueOf (Z)Ljava/lang/Boolean;	  4 5 & tasks ( 7 8  click : 'com/ict18825/assignment/pages/TasksPage
+ 9 	  = > & reports @ )com/ict18825/assignment/pages/ReportsPage
+ ? 	  C D & users F 'com/ict18825/assignment/pages/UsersPage
+ E 	  I J & ApproveTimeTrackButton L +com/ict18825/assignment/pages/ApproveTTPage
+ K  RuntimeVisibleAnnotations $Lorg/openqa/selenium/support/FindBy; xpath 1//a[contains(@class,'userProfileLink username ')] %//a[contains(@class,'content tasks')] '//a[contains(@class,'content reports')] //div[contains(text(),'Users')] *//a[contains(text(),'Approve Time-Track')] Code LineNumberTable LocalVariableTable this (Lcom/ict18825/assignment/pages/HomePage; 
+validateTitle VerifyUsername 
+ClickTasks +()Lcom/ict18825/assignment/pages/TasksPage; ClickReports -()Lcom/ict18825/assignment/pages/ReportsPage; 
+ClickUsers +()Lcom/ict18825/assignment/pages/UsersPage; ClickApproveTimeTrack /()Lcom/ict18825/assignment/pages/ApproveTTPage; 
+SourceFile 
+HomePage.java !        % &  N     O  Ps Q   5 &  N     O  Ps R   > &  N     O  Ps S   D &  N     O  Ps T   J &  N     O  Ps U      V   >     *� � *� 
+�    W            X        Y Z    [   V   E     � � �  � � �  �    W   
+       X        Y Z    \ ,  V   J     � *� #� ' � -� *� #� ' �    W   
+       X        Y Z    ] ^  V   ?     *� 3� 6 � 9Y� ;�    W   
+    " 	 # X        Y Z    _ `  V   ?     *� <� 6 � ?Y� A�    W   
+    ' 	 ( X        Y Z    a b  V   ?     *� B� 6 � EY� G�    W   
+    , 	 - X        Y Z    c d  V   ?     *� H� 6 � KY� M�    W   
+    0 	 1 X        Y Z    e    f
